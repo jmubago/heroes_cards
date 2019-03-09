@@ -17,12 +17,12 @@ export class SearchComponent implements OnInit {
     private router: Router) { 
       this.activatedRoute.params.subscribe(params => {
         this.heroes = this._heroeService.buscarHeroe(params['texto']);
-        console.log('1', this.heroes);
+        console.log(this.heroes);
+        console.log(this.heroes.length);
       });
     }
 
   ngOnInit() {
-    console.log('2 ', this.heroes);
   }
 
 }

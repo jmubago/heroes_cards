@@ -2,6 +2,12 @@
 
 <hr>
 
+<div *ngIf='heroes.length == 0'>
+    <div class="alert alert-danger" role="alert">
+        No se han encontrado heroes para tu búsqueda
+    </div>
+</div>
+
 <div class='card-columns'>
     <div class="card animated fadeIn fast" *ngFor='let heroe of heroes, let i = index'>
         <img src="{{heroe.img}}" class="card-img-top" alt="{{heroe.nombre}}">
